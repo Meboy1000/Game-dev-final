@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dpl521ksmyyow"]
+
+[node name="Node3D" type="Node3D" unique_id=1506123541]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." unique_id=1923453498]
+debug_color = Color(0.85882354, 0.050980393, 0.49019608, 1)
