@@ -14,6 +14,9 @@ func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_C:
 			clear_map()
+		elif event.pressed and event.keycode == KEY_ESCAPE:
+			var next_scene = load("res://Assets/Scenes/demo.tscn")
+			get_tree().change_scene_to_packed(next_scene)
 			
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
