@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://h3uvi6ste4yw"]
+
+[ext_resource type="Texture2D" uid="uid://cvqckdo4d73ck" path="res://icon.svg" id="1_5cl1l"]
+[ext_resource type="Script" uid="uid://lmwmrit0eaq3" path="res://Assets/Scripts/mapdraw.gd" id="1_p1dcv"]
+
+[sub_resource type="SystemFont" id="SystemFont_5cl1l"]
+
+[node name="MapUi" type="Control" unique_id=790279743]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p1dcv")
+font = SubResource("SystemFont_5cl1l")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1509834620]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_5cl1l")
+draw_center = false
+region_rect = Rect2(8.579361, 7.9545975, 111.19026, 112.43122)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=781634937]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
