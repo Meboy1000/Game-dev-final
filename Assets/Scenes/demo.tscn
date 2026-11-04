@@ -16,6 +16,9 @@ albedo_color = Color(0, 0, 0, 1)
 emission_enabled = true
 emission_texture = SubResource("ViewportTexture_usnpu")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mu16p"]
+size = Vector3(1, 1, 0.01)
+
 [sub_resource type="SphereMesh" id="SphereMesh_qve38"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0jf5c"]
@@ -35,10 +38,17 @@ sky = SubResource("Sky_usnpu")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=735277153]
 script = ExtResource("1_r1o0a")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1460324017]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11884242, -0.88003016)
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1020682117]
+
+[node name="Map" type="MeshInstance3D" parent="." unique_id=1460324017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11884242, -1.3905226)
 mesh = SubResource("QuadMesh_mu16p")
 surface_material_override/0 = SubResource("StandardMaterial3D_6tljr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map" unique_id=144137468]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/StaticBody3D" unique_id=1931080920]
+shape = SubResource("BoxShape3D_mu16p")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=350658182]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0480373, 0, -5.765782)
