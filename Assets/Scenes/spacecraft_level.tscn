@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://brluewqj0k2x"]
+
+[ext_resource type="PackedScene" uid="uid://dadtmo5tqg80o" path="res://Assets/Models/spacecraft.glb" id="1_cki0v"]
+
+[node name="SpacecraftLevel" type="Node3D" unique_id=1386038015]
+
+[node name="spacecraft" parent="." unique_id=1903717983 instance=ExtResource("1_cki0v")]
+
+[node name="Cylinder" parent="spacecraft" index="41" unique_id=27950940]
+transform = Transform3D(-0.9057808, 0, -2.127999, -2.1279979, 0, 0.9057813, 0, 1.15638, 0, -19.15949, 4.5305786, -18.440561)
+
+[editable path="spacecraft"]
