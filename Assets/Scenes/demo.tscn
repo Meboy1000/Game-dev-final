@@ -35,13 +35,17 @@ sky = SubResource("Sky_usnpu")
 
 [node name="Demo" type="Node3D" unique_id=2090560293]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=735277153]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=735277153 node_paths=PackedStringArray("raycaster", "map", "subViewport")]
 script = ExtResource("1_r1o0a")
+raycaster = NodePath("RayCast3D")
+map = NodePath("../Map")
+subViewport = NodePath("../SubViewport")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1020682117]
+target_position = Vector3(0, 0, -100)
 
 [node name="Map" type="MeshInstance3D" parent="." unique_id=1460324017]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11884242, -1.3905226)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11884242, -0.88860965)
 mesh = SubResource("QuadMesh_mu16p")
 surface_material_override/0 = SubResource("StandardMaterial3D_6tljr")
 
