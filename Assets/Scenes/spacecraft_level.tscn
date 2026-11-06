@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dadtmo5tqg80o" path="res://Assets/Models/spacecraft.glb" id="1_cki0v"]
 [ext_resource type="Script" uid="uid://dtnapfrw1rlun" path="res://Assets/Scripts/camera.gd" id="2_lldlo"]
 [ext_resource type="Material" uid="uid://bwbl3qno5uho1" path="res://Assets/Materials/Glass.tres" id="2_uqtv2"]
-[ext_resource type="Script" uid="uid://d1qbve22k87d4" path="res://Assets/Scripts/screen_right.gd" id="3_7n8gn"]
+[ext_resource type="Script" uid="uid://d1qbve22k87d4" path="res://Assets/Scripts/screenmover.gd" id="3_7n8gn"]
 [ext_resource type="PackedScene" uid="uid://c70uf8jctdg3u" path="res://Assets/Scenes/map_ui_2.tscn" id="4_6sw61"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_g4v7s"]
@@ -43,10 +43,16 @@ transform = Transform3D(-0.9057808, 0, -2.127999, -2.1279979, 0, 0.9057813, 0, 1
 [node name="Larger Window" parent="spacecraft" index="52" unique_id=909515239]
 surface_material_override/0 = ExtResource("2_uqtv2")
 
+[node name="Screen_left" parent="spacecraft" index="53" unique_id=424027811 node_paths=PackedStringArray("camera")]
+script = ExtResource("3_7n8gn")
+camera = NodePath("../../Camera3D")
+inputaction = "toggleradio"
+
 [node name="Screen_right" parent="spacecraft" index="54" unique_id=768070297 node_paths=PackedStringArray("camera")]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 3.8003588, 4.4828415, -7.3258286)
 script = ExtResource("3_7n8gn")
 camera = NodePath("../../Camera3D")
+inputaction = "togglemap"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="spacecraft/Screen_right" index="0" unique_id=737740447]
 transform = Transform3D(3.1, 0, 0, 0, -7.999184e-08, -2, 0, 1.83, -8.742278e-08, 0, -0.03375888, 0)
