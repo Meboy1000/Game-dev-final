@@ -5,3 +5,5 @@ sky_top_color = Color(0.83404464, 0.0041700723, 0.25045365, 1)
 sky_horizon_color = Color(0, 0, 0, 1)
 sky_curve = 0.19118404
 sky_energy_multiplier = 9.3
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.003921569, 0.003921569, 0.003921569, 1)
