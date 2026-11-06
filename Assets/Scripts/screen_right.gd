@@ -10,7 +10,7 @@ func _ready() -> void:
 	baserot = rotation
 
 
-func _input(event: InputEvent) -> void:
+func _input(InputEvent) -> void:
 	if Input.is_action_just_pressed("togglemap"):
 		if looking:
 			print("not looking at the map")
