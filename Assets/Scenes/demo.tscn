@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cljlm2kig2kqk"]
+
+[ext_resource type="Script" uid="uid://dtnapfrw1rlun" path="res://Assets/Scripts/camera.gd" id="1_r1o0a"]
+[ext_resource type="Script" uid="uid://bx0iml88nr2kt" path="res://Assets/Scripts/picker.gd" id="2_wrup6"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qve38"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0jf5c"]
+
+[node name="Demo" type="Node3D" unique_id=2090560293]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=735277153]
+script = ExtResource("1_r1o0a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=350658182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0480373, 0, -5.765782)
+mesh = SubResource("SphereMesh_qve38")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1710825095]
+script = ExtResource("2_wrup6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1289097136]
+shape = SubResource("SphereShape3D_0jf5c")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1850314342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.796838, 0, -5.765782)
+mesh = SubResource("SphereMesh_qve38")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2" unique_id=1941148303]
+script = ExtResource("2_wrup6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D" unique_id=1633292520]
+shape = SubResource("SphereShape3D_0jf5c")
+
+[connection signal="input_event" from="MeshInstance3D/StaticBody3D" to="MeshInstance3D/StaticBody3D" method="_on_input_event"]
+[connection signal="input_event" from="MeshInstance3D2/StaticBody3D" to="MeshInstance3D2/StaticBody3D" method="_on_input_event"]
