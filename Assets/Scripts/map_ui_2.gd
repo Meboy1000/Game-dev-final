@@ -1,15 +1,15 @@
 extends Control
 
 var camera_pos := Vector2.ZERO   # World coordinate at the screen center
-var zoom := 1.0                  # Pixels per world unit multiplier
+var zoom := 2.0                  # Pixels per world unit multiplier
 var dragging := false
 
 const MIN_ZOOM := 0.1
 const MAX_ZOOM := 20.0
-const TARGET_GRID_PIXELS := 70.0
+const TARGET_GRID_PIXELS := 100.0
 
 var font := ThemeDB.fallback_font
-const LABEL_FONT_SIZE := 14
+const LABEL_FONT_SIZE := 20
 
 # Keep track of drawing states
 enum State { WAITING, DRAWING }
@@ -122,7 +122,7 @@ func _draw():
 		if x == 0:
 			color = Color(0.8, 0.25, 0.25) # Y axis
 
-		draw_line(Vector2(screen_x, 0), Vector2(screen_x, size.y), color, 1.0)
+		draw_line(Vector2(screen_x, 0), Vector2(screen_x, size.y), color, 2.0)
 
 	for y in range(int(min_y / grid_step), int(max_y / grid_step) + 1):
 		var world_y := y * grid_step
@@ -210,7 +210,7 @@ func _draw():
 			radius_label,
 			HORIZONTAL_ALIGNMENT_LEFT,
 			-1,
-			14,
+			LABEL_FONT_SIZE,
 			Color.WHITE
 		)
 
