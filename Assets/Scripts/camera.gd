@@ -17,7 +17,7 @@ func _ready() -> void:
 	# Cache starting orientation
 	initial_rotation = rotation
 	# Make sure mouse is visible and free to click UI/3D nodes
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+	# Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 
 func _process(delta: float) -> void:
 	# 1. Grab screen boundary dimensions

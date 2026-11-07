@@ -1,10 +1,17 @@
 [gd_scene format=4 uid="uid://brluewqj0k2x"]
 
+[ext_resource type="Script" uid="uid://dwvahsq2uw53t" path="res://Assets/Scenes/movething.gd" id="1_7oo5u"]
 [ext_resource type="Script" uid="uid://dtnapfrw1rlun" path="res://Assets/Scripts/camera.gd" id="2_lldlo"]
 [ext_resource type="Material" uid="uid://bwbl3qno5uho1" path="res://Assets/Materials/Glass.tres" id="2_uqtv2"]
 [ext_resource type="Script" uid="uid://d1qbve22k87d4" path="res://Assets/Scripts/screenmover.gd" id="3_7n8gn"]
 [ext_resource type="PackedScene" uid="uid://c70uf8jctdg3u" path="res://Assets/Scenes/map_ui_2.tscn" id="4_6sw61"]
 [ext_resource type="PackedScene" uid="uid://bhw5qsaxgxkra" path="res://Assets/Scenes/Radio.tscn" id="6_7oo5u"]
+
+[sub_resource type="Environment" id="Environment_qve38"]
+background_mode = 1
+ambient_light_sky_contribution = 0.5
+glow_enabled = true
+glow_intensity = 0.68
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym4bh"]
 resource_name = "CC-3base"
@@ -3119,16 +3126,34 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sp6gy")
 
-[sub_resource type="Environment" id="Environment_qve38"]
-background_mode = 1
-ambient_light_sky_contribution = 0.5
-glow_enabled = true
-glow_intensity = 0.68
-
 [node name="SpacecraftLevel" type="Node3D" unique_id=1386038015]
 
 [node name="spacecraft" type="Node3D" parent="." unique_id=1903717983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6010008, 0, 0)
+script = ExtResource("1_7oo5u")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="spacecraft" unique_id=1543795057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6010008, 5.157501, -1.8653257)
+shadow_enabled = true
+omni_range = 21.371
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="spacecraft" unique_id=2048263327]
+environment = SubResource("Environment_qve38")
+
+[node name="Camera3D" type="Camera3D" parent="spacecraft" unique_id=153438057 node_paths=PackedStringArray("raycaster", "subViewport", "map")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6010008, 4.447045, -2.4973564)
+fov = 60.0
+script = ExtResource("2_lldlo")
+raycaster = NodePath("RayCast3D")
+subViewport = NodePath("../../SubViewport")
+map = NodePath("../Screen_right/MeshInstance3D")
+
+[node name="RayCast3D" type="RayCast3D" parent="spacecraft/Camera3D" unique_id=1481847649]
+target_position = Vector3(0, 0, -10)
+hit_from_inside = true
+collide_with_areas = true
+debug_shape_custom_color = Color(0.93333334, 0, 0, 1)
+debug_shape_thickness = 5
 
 [node name="bottom5_bottom" type="MeshInstance3D" parent="spacecraft" unique_id=1521259912]
 transform = Transform3D(0.9997249, 0.0057896855, 0.022726597, 0.0047172415, 0.89960223, -0.43668473, -0.022973167, 0.43667185, 0.8993275, 1.0003018, 1.6953987, -11.333065)
@@ -3346,7 +3371,7 @@ surface_material_override/0 = ExtResource("2_uqtv2")
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 3.8003588, 4.4828415, -7.3258286)
 mesh = SubResource("ArrayMesh_uj0qi")
 script = ExtResource("3_7n8gn")
-camera = NodePath("../../Camera3D")
+camera = NodePath("../Camera3D")
 inputaction = "togglemap"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="spacecraft/Screen_right" unique_id=737740447]
@@ -3365,7 +3390,7 @@ shape = SubResource("BoxShape3D_g4v7s")
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -2.8608522, 4.4828415, -7.3258286)
 mesh = SubResource("ArrayMesh_uj0qi")
 script = ExtResource("3_7n8gn")
-camera = NodePath("../../Camera3D")
+camera = NodePath("../Camera3D")
 inputaction = "toggleradio"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="spacecraft/ScreenLeft" unique_id=1860146439]
@@ -3518,29 +3543,6 @@ mesh = SubResource("ArrayMesh_w0irr")
 [node name="wires" type="MeshInstance3D" parent="spacecraft" unique_id=308845359]
 transform = Transform3D(0.9518509, -0.30656135, 0, 0.30656135, 0.9518509, 0, 0, 0, 1, -1.7275808, 6.979753, -9.217929)
 mesh = SubResource("ArrayMesh_btlhc")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=153438057 node_paths=PackedStringArray("raycaster", "subViewport", "map")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.447045, -2.4973564)
-fov = 60.0
-script = ExtResource("2_lldlo")
-raycaster = NodePath("RayCast3D")
-subViewport = NodePath("../SubViewport")
-map = NodePath("../spacecraft/Screen_right/MeshInstance3D")
-
-[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1481847649]
-target_position = Vector3(0, 0, -10)
-hit_from_inside = true
-collide_with_areas = true
-debug_shape_custom_color = Color(0.93333334, 0, 0, 1)
-debug_shape_thickness = 5
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2048263327]
-environment = SubResource("Environment_qve38")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=1543795057]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.157501, -1.8653257)
-shadow_enabled = true
-omni_range = 21.371
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1236830788]
 anisotropic_filtering_level = 3
