@@ -23,7 +23,9 @@ func _input(_event) -> void:
 			if Screenlocks.request_lock(self):
 				print("looking at the map")
 				var targpos = camera.position
+				print(targpos)
 				targpos.z -= 3
-				global_position = targpos
+				print(targpos)
+				position = targpos
 				rotation.y = 0
 				looking = true

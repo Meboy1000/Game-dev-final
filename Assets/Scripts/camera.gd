@@ -6,8 +6,8 @@ extends Camera3D
 @export var smooth_speed: float = 4.0
 
 @export var raycaster: RayCast3D
-@export var subViewport: SubViewport
-@export var map: MeshInstance3D
+var subViewport: SubViewport
+var map: MeshInstance3D
 
 var initial_rotation: Vector3
 var hovering := false
@@ -49,7 +49,14 @@ func _process(delta: float) -> void:
 	if not raycaster.is_colliding():
 		hovering = false
 		return
-	
+	var collider = raycaster.get_collider()
+	print(collider)
+	if "variable" in collider:
+		if collider.variable is SubViewport:
+			subViewport = collider.variable
+			map = collider.variable2
+	else:
+		return
 
 	var local := map.to_local(raycaster.get_collision_point())
 	var meshSize := (map.mesh as QuadMesh).size
@@ -69,9 +76,6 @@ func _process(delta: float) -> void:
 	hovering = true
 	
 func _input(event: InputEvent) -> void:
-	
-	
-	
 	
 	if not hovering:
 		return
