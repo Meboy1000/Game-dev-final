@@ -11,7 +11,7 @@ func _ready() -> void:
 	baserot = rotation
 
 
-func _input(InputEvent) -> void:
+func _input(_event) -> void:
 	if Input.is_action_just_pressed(inputaction):
 		if looking:
 			print("not looking at the map")

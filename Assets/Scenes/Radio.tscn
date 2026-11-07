@@ -1,5 +1,15 @@
 [gd_scene format=3 uid="uid://bhw5qsaxgxkra"]
 
+[ext_resource type="Texture2D" uid="uid://cvqckdo4d73ck" path="res://icon.svg" id="1_6sfj6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0u6y"]
+bg_color = Color(0.003921569, 0.003921569, 0.003921569, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.491344, 0, 1)
+
 [node name="Radio" type="Control" unique_id=129175664]
 layout_mode = 3
 anchors_preset = 15
@@ -8,16 +18,141 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=1986149559]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=382956366]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.19800001
-anchor_bottom = 0.24700001
-offset_right = -149.76001
-offset_bottom = -82.296
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="ReferenceRect" type="ReferenceRect" parent="GridContainer" unique_id=1794834067]
-custom_minimum_size = Vector2(20.41, 19.925)
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=1532277606]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0, 0.6509804, 0, 1)
+border_width = 2.9
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ReferenceRect" unique_id=1657114662]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReferenceRect/HBoxContainer" unique_id=517280642]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-border_width = 2.0
-editor_only = false
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Button" type="Button" parent="ReferenceRect/HBoxContainer/VBoxContainer" unique_id=387097240]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d0u6y")
+text = "Station X"
+
+[node name="Button2" type="Button" parent="ReferenceRect/HBoxContainer/VBoxContainer" unique_id=948778713]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Station X"
+
+[node name="Button3" type="Button" parent="ReferenceRect/HBoxContainer/VBoxContainer" unique_id=277309489]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Station X"
+
+[node name="Button4" type="Button" parent="ReferenceRect/HBoxContainer/VBoxContainer" unique_id=263136928]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Station X"
+
+[node name="Button5" type="Button" parent="ReferenceRect/HBoxContainer/VBoxContainer" unique_id=839659742]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Station X"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ReferenceRect/HBoxContainer" unique_id=593510794]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ReferenceRect/HBoxContainer/VBoxContainer2" unique_id=955551381]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_6sfj6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ReferenceRect/HBoxContainer/VBoxContainer2" unique_id=1970668919]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReferenceRect/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=572026331]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StationName" type="Label" parent="ReferenceRect/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=1094059390]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "STATION X:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StationDistance" type="Label" parent="ReferenceRect/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=1018063610]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "2093.55"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ReferenceRect/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=435131191]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StationName" type="Label" parent="ReferenceRect/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" unique_id=2008328155]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "STATION X:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StationDistance" type="Label" parent="ReferenceRect/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" unique_id=381455546]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "2093.55"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ReferenceRect/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=1088705917]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StationName" type="Label" parent="ReferenceRect/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" unique_id=358677695]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "STATION X:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StationDistance" type="Label" parent="ReferenceRect/HBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" unique_id=202240193]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "2093.55"
+horizontal_alignment = 1
+vertical_alignment = 1
