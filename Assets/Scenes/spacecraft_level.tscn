@@ -1,10 +1,185 @@
 [gd_scene format=3 uid="uid://brluewqj0k2x"]
 
 [ext_resource type="PackedScene" uid="uid://dadtmo5tqg80o" path="res://Assets/Models/spacecraft.glb" id="1_cki0v"]
+[ext_resource type="Texture2D" uid="uid://4qdch7maf0lk" path="res://Assets/Textures/SB_GD/spaceship_Floor_BaseColor.1001.png" id="2_5rc0h"]
+[ext_resource type="Texture2D" uid="uid://c5gx7rp8y0grw" path="res://Assets/Textures/SB_GD/spaceship_CC-base_BaseColor.1001.png" id="2_ljldl"]
 [ext_resource type="Script" uid="uid://dtnapfrw1rlun" path="res://Assets/Scripts/camera.gd" id="2_lldlo"]
-[ext_resource type="Material" uid="uid://bwbl3qno5uho1" path="res://Assets/Materials/Glass.tres" id="2_uqtv2"]
 [ext_resource type="Script" uid="uid://d1qbve22k87d4" path="res://Assets/Scripts/screenmover.gd" id="3_7n8gn"]
+[ext_resource type="Texture2D" uid="uid://d3t3p7d2gakru" path="res://Assets/Textures/SB_GD/spaceship_CC-base_Height.1001.png" id="3_aakec"]
+[ext_resource type="Texture2D" uid="uid://b4au1wf3p54t4" path="res://Assets/Textures/SB_GD/spaceship_Floor_Height.1001.png" id="3_wbhcg"]
+[ext_resource type="Texture2D" uid="uid://cs5pitgikimjy" path="res://Assets/Textures/SB_GD/spaceship_Floor_Normal.1001.png" id="4_0th0o"]
 [ext_resource type="PackedScene" uid="uid://c70uf8jctdg3u" path="res://Assets/Scenes/map_ui_2.tscn" id="4_6sw61"]
+[ext_resource type="Texture2D" uid="uid://rnwbjo6m14jr" path="res://Assets/Textures/SB_GD/spaceship_CC-base_Metallic.1001.png" id="4_rq2ig"]
+[ext_resource type="Texture2D" uid="uid://f1ne7sp2o155" path="res://Assets/Textures/SB_GD/spaceship_Walls_steel_BaseColor.1001.png" id="4_whd3i"]
+[ext_resource type="Texture2D" uid="uid://c5e0btea02l1t" path="res://Assets/Textures/SB_GD/spaceship_Walls_steel_Height.1001.png" id="5_f1ci7"]
+[ext_resource type="Texture2D" uid="uid://ear14dfo0jlc" path="res://Assets/Textures/SB_GD/spaceship_Floor_Roughness.1001.png" id="5_uigrd"]
+[ext_resource type="Texture2D" uid="uid://dhwu41ftukbc4" path="res://Assets/Textures/SB_GD/spaceship_CC-base_Normal.1001.png" id="5_y280c"]
+[ext_resource type="Texture2D" uid="uid://ckbygr2jc8dsy" path="res://Assets/Textures/SB_GD/spaceship_CC-base_Roughness.1001.png" id="6_0qa7k"]
+[ext_resource type="Texture2D" uid="uid://ct206e3byjd3t" path="res://Assets/Textures/SB_GD/spaceship_Window_BaseColor.1001.png" id="6_bmepa"]
+[ext_resource type="Texture2D" uid="uid://dyi7kexqto1sl" path="res://Assets/Textures/SB_GD/spaceship_Walls_steel_Metallic.1001.png" id="6_f6j5j"]
+[ext_resource type="Texture2D" uid="uid://dhg6fxbg72lq3" path="res://Assets/Textures/SB_GD/spaceship_Walls_steel_Roughness.1001.png" id="7_8rgko"]
+[ext_resource type="Texture2D" uid="uid://dr11sgkm4ji8y" path="res://Assets/Textures/SB_GD/spaceship_Walls_steel_Normal.1001.png" id="7_f1ci7"]
+[ext_resource type="Texture2D" uid="uid://dujfvgsxmg2ua" path="res://Assets/Textures/SB_GD/spaceship_CC-3Button_BaseColor.1001.png" id="7_fplns"]
+[ext_resource type="Texture2D" uid="uid://bbsphlldflevu" path="res://Assets/Textures/SB_GD/spaceship_CC-top_BaseColor.1001.png" id="7_rq2ig"]
+[ext_resource type="Texture2D" uid="uid://4hhtvu0xbg23" path="res://Assets/Textures/SB_GD/spaceship_Window_Height.1001.png" id="7_ypdb6"]
+[ext_resource type="Texture2D" uid="uid://caf6wtu657ycn" path="res://Assets/Textures/SB_GD/spaceship_CC-3Button_Height.1001.png" id="8_6phm3"]
+[ext_resource type="Texture2D" uid="uid://b58jhjsvbybp6" path="res://Assets/Textures/SB_GD/spaceship_Window_Metallic.1001.png" id="8_53ccw"]
+[ext_resource type="Texture2D" uid="uid://baf55g77nltio" path="res://Assets/Textures/SB_GD/spaceship_Roof.001_BaseColor.1001.png" id="8_m47dh"]
+[ext_resource type="Texture2D" uid="uid://3xmktp4qgclx" path="res://Assets/Textures/SB_GD/spaceship_CC-top_Metallic.1001.png" id="8_y280c"]
+[ext_resource type="Texture2D" uid="uid://es61srw55p1j" path="res://Assets/Textures/SB_GD/spaceship_CC-3Button_Metallic.1001.png" id="9_14cf4"]
+[ext_resource type="Texture2D" uid="uid://cs3fjvmsxvbmq" path="res://Assets/Textures/SB_GD/spaceship_Window_Normal.1001.png" id="9_kyagm"]
+[ext_resource type="Texture2D" uid="uid://b6pk0ej7frr03" path="res://Assets/Textures/SB_GD/spaceship_Roof.001_Metallic.1001.png" id="9_oh74t"]
+[ext_resource type="Texture2D" uid="uid://6oaoytx7drok" path="res://Assets/Textures/SB_GD/spaceship_Window_Roughness.1001.png" id="10_0uln5"]
+[ext_resource type="Texture2D" uid="uid://dce1jjuer8o6a" path="res://Assets/Textures/SB_GD/spaceship_CC-3Button_Normal.1001.png" id="10_7qr7j"]
+[ext_resource type="Texture2D" uid="uid://c0nj8471i3704" path="res://Assets/Textures/SB_GD/spaceship_Roof.001_Normal.1001.png" id="10_wx6xm"]
+[ext_resource type="Texture2D" uid="uid://cjw6lq1gfl38x" path="res://Assets/Textures/SB_GD/spaceship_Screen_BaseColor.1001.png" id="11_0uln5"]
+[ext_resource type="Texture2D" uid="uid://b50jaf4l8mlh3" path="res://Assets/Textures/SB_GD/spaceship_CC-3Button_Roughness.1001.png" id="11_an77q"]
+[ext_resource type="Texture2D" uid="uid://0p432qs60sfd" path="res://Assets/Textures/SB_GD/spaceship_Roof.001_Roughness.1001.png" id="11_yiira"]
+[ext_resource type="Texture2D" uid="uid://dwvwwrrivyqyo" path="res://Assets/Textures/SB_GD/spaceship_Screen_Height.1001.png" id="12_u2qw2"]
+[ext_resource type="Texture2D" uid="uid://dau1fchnohsnt" path="res://Assets/Textures/SB_GD/spaceship_Screen_Metallic.1001.png" id="13_te4we"]
+[ext_resource type="Texture2D" uid="uid://d2j7udj8im05d" path="res://Assets/Textures/SB_GD/spaceship_Screen_Normal.1001.png" id="14_aedlr"]
+[ext_resource type="Texture2D" uid="uid://di5dykmwmvytu" path="res://Assets/Textures/SB_GD/spaceship_CC-2base_BaseColor.1001.png" id="14_kwkli"]
+[ext_resource type="Texture2D" uid="uid://byqhg2t5jxg62" path="res://Assets/Textures/SB_GD/spaceship_Roof.001_Height.1001.png" id="14_u2qw2"]
+[ext_resource type="Texture2D" uid="uid://b5u3gkj6mqpym" path="res://Assets/Textures/SB_GD/spaceship_CC-2base_Height.1001.png" id="15_wx477"]
+[ext_resource type="Texture2D" uid="uid://clefrefri1i7l" path="res://Assets/Textures/SB_GD/spaceship_CC-2base_Metallic.1001.png" id="16_b4d2q"]
+[ext_resource type="Texture2D" uid="uid://dndfq2r8dss0q" path="res://Assets/Textures/SB_GD/spaceship_CC-2base_Normal.1001.png" id="17_lmfc3"]
+[ext_resource type="Texture2D" uid="uid://ggouin3sqogw" path="res://Assets/Textures/SB_GD/spaceship_CC-2base_Roughness.1001.png" id="18_eoltk"]
+[ext_resource type="Texture2D" uid="uid://cytmmwvwgthb5" path="res://Assets/Textures/SB_GD/spaceship_CC-2prongs_BaseColor.1001.png" id="19_8il3w"]
+[ext_resource type="Texture2D" uid="uid://n63gdwm1gdij" path="res://Assets/Textures/SB_GD/spaceship_CC-2prongs_Height.1001.png" id="20_x3hxg"]
+[ext_resource type="Texture2D" uid="uid://c2chbgax8lmio" path="res://Assets/Textures/SB_GD/spaceship_CC-2prongs_Metallic.1001.png" id="21_5wu6b"]
+[ext_resource type="Texture2D" uid="uid://jo62iaoivtae" path="res://Assets/Textures/SB_GD/spaceship_CC-2prongs_Normal.1001.png" id="22_5hn47"]
+[ext_resource type="Texture2D" uid="uid://b24evn4tfbpp4" path="res://Assets/Textures/SB_GD/spaceship_CC-2prongs_Roughness.1001.png" id="23_qt8j2"]
+[ext_resource type="Texture2D" uid="uid://b2wn0o1nrfsgi" path="res://Assets/Textures/SB_GD/spaceship_CC-2top_BaseColor.1001.png" id="24_s1cpb"]
+[ext_resource type="Texture2D" uid="uid://df7depg18qlfr" path="res://Assets/Textures/SB_GD/spaceship_CC-2top_Height.1001.png" id="25_excvd"]
+[ext_resource type="Texture2D" uid="uid://d3d5eioekkn2q" path="res://Assets/Textures/SB_GD/spaceship_Wires_BaseColor.1001.png" id="26_m4wc6"]
+[ext_resource type="Texture2D" uid="uid://c23cxaiacouvx" path="res://Assets/Textures/SB_GD/spaceship_CC-2top_Metallic.1001.png" id="26_umbhb"]
+[ext_resource type="Texture2D" uid="uid://c70fflci00j7x" path="res://Assets/Textures/SB_GD/spaceship_CC-2top_Normal.1001.png" id="27_5ykca"]
+[ext_resource type="Texture2D" uid="uid://pnafpshetec1" path="res://Assets/Textures/SB_GD/spaceship_CC-2top_Roughness.1001.png" id="28_1v03k"]
+[ext_resource type="Texture2D" uid="uid://2v258c43nj4w" path="res://Assets/Textures/SB_GD/spaceship_Wires_Metallic.1001.png" id="28_pkh8v"]
+[ext_resource type="Texture2D" uid="uid://btofqutkrve4h" path="res://Assets/Textures/SB_GD/spaceship_CC-1_BaseColor.1001.png" id="29_4yks8"]
+[ext_resource type="Texture2D" uid="uid://drkslxqjlqh6y" path="res://Assets/Textures/SB_GD/spaceship_Wires_Normal.1001.png" id="29_p3cn0"]
+[ext_resource type="Texture2D" uid="uid://etkghjnefowc" path="res://Assets/Textures/SB_GD/spaceship_CC-1_Height.1001.png" id="30_5oi64"]
+[ext_resource type="Texture2D" uid="uid://8mmfiiv0uf3a" path="res://Assets/Textures/SB_GD/spaceship_Wires_Roughness.1001.png" id="30_ljldl"]
+[ext_resource type="Texture2D" uid="uid://diyibp1xbuw8x" path="res://Assets/Textures/SB_GD/spaceship_CC-1_Metallic.1001.png" id="31_7alwm"]
+[ext_resource type="Texture2D" uid="uid://dww48ovb7hru7" path="res://Assets/Textures/SB_GD/spaceship_CC-1_Normal.1001.png" id="32_lf86l"]
+[ext_resource type="Texture2D" uid="uid://cki3bllr3sq7t" path="res://Assets/Textures/SB_GD/spaceship_CC-1_Roughness.1001.png" id="33_6hjy2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aedlr"]
+albedo_texture = ExtResource("2_ljldl")
+metallic = 1.0
+metallic_texture = ExtResource("4_rq2ig")
+roughness_texture = ExtResource("6_0qa7k")
+normal_enabled = true
+normal_texture = ExtResource("5_y280c")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_aakec")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i38b1"]
+albedo_texture = ExtResource("7_fplns")
+metallic = 0.4
+metallic_specular = 0.23
+metallic_texture = ExtResource("9_14cf4")
+roughness = 0.76
+roughness_texture = ExtResource("11_an77q")
+normal_enabled = true
+normal_texture = ExtResource("10_7qr7j")
+heightmap_enabled = true
+heightmap_texture = ExtResource("8_6phm3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_17jvc"]
+albedo_texture = ExtResource("7_rq2ig")
+metallic = 1.0
+metallic_texture = ExtResource("8_y280c")
+roughness_texture = ExtResource("6_0qa7k")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qa7k"]
+albedo_texture = ExtResource("14_kwkli")
+metallic = 1.0
+metallic_texture = ExtResource("16_b4d2q")
+roughness_texture = ExtResource("18_eoltk")
+normal_enabled = true
+normal_texture = ExtResource("17_lmfc3")
+heightmap_enabled = true
+heightmap_texture = ExtResource("15_wx477")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbakb"]
+albedo_texture = ExtResource("19_8il3w")
+metallic = 1.0
+metallic_texture = ExtResource("21_5wu6b")
+roughness_texture = ExtResource("23_qt8j2")
+normal_enabled = true
+normal_texture = ExtResource("22_5hn47")
+heightmap_enabled = true
+heightmap_texture = ExtResource("20_x3hxg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wnbji"]
+albedo_texture = ExtResource("24_s1cpb")
+metallic = 1.0
+metallic_texture = ExtResource("26_umbhb")
+roughness_texture = ExtResource("28_1v03k")
+normal_enabled = true
+normal_texture = ExtResource("27_5ykca")
+heightmap_enabled = true
+heightmap_texture = ExtResource("25_excvd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y280c"]
+albedo_texture = ExtResource("29_4yks8")
+metallic = 1.0
+metallic_texture = ExtResource("31_7alwm")
+roughness_texture = ExtResource("33_6hjy2")
+normal_enabled = true
+normal_texture = ExtResource("32_lf86l")
+heightmap_enabled = true
+heightmap_texture = ExtResource("30_5oi64")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_63i75"]
+albedo_texture = ExtResource("7_rq2ig")
+metallic = 1.0
+metallic_texture = ExtResource("4_rq2ig")
+roughness_texture = ExtResource("6_0qa7k")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whd3i"]
+albedo_texture = ExtResource("2_5rc0h")
+metallic_specular = 0.92
+roughness_texture = ExtResource("5_uigrd")
+normal_enabled = true
+normal_texture = ExtResource("4_0th0o")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_wbhcg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmonx"]
+albedo_texture = ExtResource("6_bmepa")
+metallic = 1.0
+metallic_texture = ExtResource("8_53ccw")
+roughness_texture = ExtResource("10_0uln5")
+normal_enabled = true
+normal_texture = ExtResource("9_kyagm")
+heightmap_enabled = true
+heightmap_texture = ExtResource("7_ypdb6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_te4we"]
+albedo_texture = ExtResource("6_bmepa")
+metallic = 1.0
+metallic_texture = ExtResource("8_53ccw")
+roughness_texture = ExtResource("10_0uln5")
+normal_enabled = true
+normal_texture = ExtResource("9_kyagm")
+heightmap_enabled = true
+heightmap_texture = ExtResource("7_ypdb6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmepa"]
+albedo_texture = ExtResource("11_0uln5")
+metallic = 1.0
+metallic_texture = ExtResource("13_te4we")
+normal_enabled = true
+normal_texture = ExtResource("14_aedlr")
+heightmap_enabled = true
+heightmap_texture = ExtResource("12_u2qw2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8e5vc"]
+albedo_texture = ExtResource("11_0uln5")
+metallic = 1.0
+metallic_texture = ExtResource("13_te4we")
 
 [sub_resource type="QuadMesh" id="QuadMesh_g4v7s"]
 
@@ -20,6 +195,79 @@ emission_texture = SubResource("ViewportTexture_57qmd")
 [sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
 size = Vector3(1, 1, 0.10028076)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rc0h"]
+albedo_texture = ExtResource("8_m47dh")
+metallic = 1.0
+metallic_texture = ExtResource("9_oh74t")
+roughness_texture = ExtResource("11_yiira")
+normal_enabled = true
+normal_texture = ExtResource("10_wx6xm")
+heightmap_enabled = true
+heightmap_texture = ExtResource("14_u2qw2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rq2ig"]
+albedo_texture = ExtResource("8_m47dh")
+metallic = 1.0
+metallic_texture = ExtResource("9_oh74t")
+roughness_texture = ExtResource("11_yiira")
+normal_enabled = true
+normal_texture = ExtResource("10_wx6xm")
+heightmap_enabled = true
+heightmap_texture = ExtResource("14_u2qw2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wbhcg"]
+albedo_texture = ExtResource("8_m47dh")
+metallic = 1.0
+metallic_texture = ExtResource("9_oh74t")
+roughness_texture = ExtResource("11_yiira")
+normal_enabled = true
+normal_texture = ExtResource("10_wx6xm")
+heightmap_enabled = true
+heightmap_texture = ExtResource("14_u2qw2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmqey"]
+albedo_texture = ExtResource("4_whd3i")
+metallic = 1.0
+metallic_texture = ExtResource("6_f6j5j")
+roughness_texture = ExtResource("7_8rgko")
+normal_enabled = true
+normal_texture = ExtResource("7_f1ci7")
+heightmap_enabled = true
+heightmap_texture = ExtResource("5_f1ci7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rgko"]
+albedo_texture = ExtResource("4_whd3i")
+metallic = 1.0
+metallic_texture = ExtResource("6_f6j5j")
+roughness_texture = ExtResource("7_8rgko")
+normal_enabled = true
+normal_texture = ExtResource("7_f1ci7")
+heightmap_enabled = true
+heightmap_texture = ExtResource("5_f1ci7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6j5j"]
+albedo_texture = ExtResource("4_whd3i")
+metallic = 1.0
+metallic_texture = ExtResource("6_f6j5j")
+roughness_texture = ExtResource("7_8rgko")
+normal_enabled = true
+normal_texture = ExtResource("7_f1ci7")
+heightmap_enabled = true
+heightmap_texture = ExtResource("5_f1ci7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki7ff"]
+metallic = 1.0
+metallic_texture = ExtResource("8_53ccw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kyagm"]
+albedo_texture = ExtResource("26_m4wc6")
+metallic = 1.0
+metallic_texture = ExtResource("28_pkh8v")
+roughness_texture = ExtResource("30_ljldl")
+normal_enabled = true
+normal_texture = ExtResource("29_p3cn0")
+heightmap_enabled = true
+
 [sub_resource type="Environment" id="Environment_qve38"]
 background_mode = 1
 ambient_light_sky_contribution = 0.5
@@ -31,25 +279,103 @@ glow_intensity = 0.68
 [node name="spacecraft" parent="." unique_id=1903717983 instance=ExtResource("1_cki0v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6010008, 0, 0)
 
-[node name="Cube_074" parent="spacecraft" index="39" unique_id=1415066692]
+[node name="control_bottom" parent="spacecraft" index="9" unique_id=1274019462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6407358, 0.61009705, -11.23306)
+surface_material_override/0 = SubResource("StandardMaterial3D_aedlr")
+
+[node name="Control_button_top_1" parent="spacecraft" index="13" unique_id=2069025655]
+transform = Transform3D(1, 0, 0, 0, 0.90645146, -0.42231, 0, 0.42231, 0.90645146, 0.3038147, 1.7669048, -11.300928)
+surface_material_override/0 = SubResource("StandardMaterial3D_i38b1")
+
+[node name="Control_button_top_2" parent="spacecraft" index="14" unique_id=1307177408]
+surface_material_override/0 = SubResource("StandardMaterial3D_i38b1")
+
+[node name="Control_button_top_3" parent="spacecraft" index="15" unique_id=1020793993]
+transform = Transform3D(1, 0, 0, 0, 0.90645146, -0.42231, 0, 0.42231, 0.90645146, 0.66840994, 1.7669048, -11.300928)
+surface_material_override/0 = SubResource("StandardMaterial3D_i38b1")
+
+[node name="Control_button_top_4" parent="spacecraft" index="16" unique_id=834183574]
+surface_material_override/0 = SubResource("StandardMaterial3D_i38b1")
+
+[node name="Control_button_top_5" parent="spacecraft" index="17" unique_id=584666229]
+transform = Transform3D(1, 0, 0, 0, 0.90645146, -0.42231, 0, 0.42231, 0.90645146, 0.999261, 1.7669048, -11.300928)
+surface_material_override/0 = SubResource("StandardMaterial3D_i38b1")
+
+[node name="Control_button_top_6" parent="spacecraft" index="18" unique_id=1483330156]
+transform = Transform3D(1, 0, 0, 0, 0.90645146, -0.42231, 0, 0.42231, 0.90645146, 1.0226768, 1.6226829, -10.964892)
+surface_material_override/0 = SubResource("StandardMaterial3D_i38b1")
+
+[node name="control_header" parent="spacecraft" index="20" unique_id=1082870825]
+surface_material_override/0 = SubResource("StandardMaterial3D_17jvc")
+
+[node name="Control_lever_bottom" parent="spacecraft" index="21" unique_id=2054547113]
+surface_material_override/0 = SubResource("StandardMaterial3D_0qa7k")
+
+[node name="Control_lever_pole_right" parent="spacecraft" index="22" unique_id=676266175]
+surface_material_override/0 = SubResource("StandardMaterial3D_hbakb")
+
+[node name="Control_lever_top" parent="spacecraft" index="23" unique_id=1909138932]
+surface_material_override/0 = SubResource("StandardMaterial3D_wnbji")
+
+[node name="control_pad" parent="spacecraft" index="25" unique_id=913330950]
+surface_material_override/0 = SubResource("StandardMaterial3D_y280c")
+
+[node name="control_top" parent="spacecraft" index="30" unique_id=947514903]
+surface_material_override/0 = SubResource("StandardMaterial3D_63i75")
+
+[node name="Cube_005" parent="spacecraft" index="34" unique_id=1918863442]
+transform = Transform3D(0.638937, 0, 0, 0, 0.051220126, 0.22154327, 0, 0.024030736, -0.4722067, -1.6669066, 1.5633459, -11.088062)
+
+[node name="Cube_074" parent="spacecraft" index="39" unique_id=1861869496]
 transform = Transform3D(0, 0.08714037, 0, 0, 0, 0.90994215, -1.5550727, 0, 0, -5.9227242, 4.4828415, -7.3634977)
 
-[node name="Cube_075" parent="spacecraft" index="40" unique_id=542154988]
+[node name="Cube_075" parent="spacecraft" index="40" unique_id=824716933]
 transform = Transform3D(-9.2689554e-08, -0.08714037, 1.616382e-15, 4.6344777e-08, -7.739619e-17, 0.90994215, 1.5550727, -5.1939706e-09, -2.711839e-08, 9.565135, 4.4828415, -7.3258286)
 
-[node name="Cylinder" parent="spacecraft" index="41" unique_id=45524241]
+[node name="Cylinder" parent="spacecraft" index="41" unique_id=27950940]
 transform = Transform3D(-0.9057808, 0, -2.127999, -2.1279979, 0, 0.9057813, 0, 1.15638, 0, -19.15949, 4.5305786, -18.440561)
 
-[node name="Larger Window" parent="spacecraft" index="52" unique_id=909515239]
-surface_material_override/0 = ExtResource("2_uqtv2")
+[node name="Cylinder_005" parent="spacecraft" index="42" unique_id=2026585996]
+transform = Transform3D(0.03, 0, 0, 0, -0.096957736, -0.02623894, 0, 0.17492627, -0.014543659, -0.58939505, 1.548321, -11.071205)
 
-[node name="Screen_left" parent="spacecraft" index="53" unique_id=424027811 node_paths=PackedStringArray("camera")]
+[node name="Cylinder_006" parent="spacecraft" index="43" unique_id=614357186]
+transform = Transform3D(0.03, 0, 0, 0, -0.096957736, -0.02623894, 0, 0.17492627, -0.014543659, -0.2798497, 1.5813446, -11.071205)
+
+[node name="Cylinder_014" parent="spacecraft" index="44" unique_id=1540656751]
+transform = Transform3D(0, 3.364806, 0, 0, 0, -0.03, -0.043151654, 0, 0, 0.61604095, 0.9991504, -10.440113)
+visible = false
+
+[node name="Cylinder_015" parent="spacecraft" index="45" unique_id=1956528003]
+visible = false
+
+[node name="Cylinder_016" parent="spacecraft" index="46" unique_id=1203398469]
+transform = Transform3D(0.04361994, 0, 0, 0, -0.19671816, -0.023372078, 0, 0.42404002, -0.010842637, 1.4673489, 1.6166999, -11.058904)
+
+[node name="Cylinder_017" parent="spacecraft" index="47" unique_id=2082704336]
+transform = Transform3D(0.04361994, 0, 0, 0, -0.19671816, -0.023372078, 0, 0.42404002, -0.010842637, 1.7051071, 1.5391178, -11.058904)
+
+[node name="Cylinder_023" parent="spacecraft" index="48" unique_id=542320553]
+transform = Transform3D(0, 0, -0.070393875, 0, 0.390076, 0, -0.043151647, 0, 0, -2.0747802, 0.9162959, -9.662545)
+visible = false
+
+[node name="Ground" parent="spacecraft" index="50" unique_id=1144021585]
+surface_material_override/0 = SubResource("StandardMaterial3D_whd3i")
+
+[node name="Inner window" parent="spacecraft" index="51" unique_id=1140825093]
+surface_material_override/0 = SubResource("StandardMaterial3D_xmonx")
+
+[node name="Larger Window" parent="spacecraft" index="52" unique_id=1635703817]
+surface_material_override/0 = SubResource("StandardMaterial3D_te4we")
+
+[node name="Screen_left" parent="spacecraft" index="53" unique_id=565023687 node_paths=PackedStringArray("camera")]
+surface_material_override/0 = SubResource("StandardMaterial3D_bmepa")
 script = ExtResource("3_7n8gn")
 camera = NodePath("../../Camera3D")
 inputaction = "toggleradio"
 
-[node name="Screen_right" parent="spacecraft" index="54" unique_id=768070297 node_paths=PackedStringArray("camera")]
+[node name="Screen_right" parent="spacecraft" index="54" unique_id=1799343947 node_paths=PackedStringArray("camera")]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 3.8003588, 4.4828415, -7.3258286)
+surface_material_override/0 = SubResource("StandardMaterial3D_8e5vc")
 script = ExtResource("3_7n8gn")
 camera = NodePath("../../Camera3D")
 inputaction = "togglemap"
@@ -65,6 +391,51 @@ transform = Transform3D(1, 0, 0, 0, 1.0000001, 9.706868e-16, 0, -8.881784e-16, 1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="spacecraft/Screen_right/MeshInstance3D/StaticBody3D" unique_id=664599153]
 transform = Transform3D(1, -3.59989e-21, 0, 0, 1.0000004, 9.706866e-16, 0, -1.6342483e-13, 1, 0, 0, -0.010406494)
 shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="top_left_plane" parent="spacecraft" index="55" unique_id=267475932]
+surface_material_override/0 = SubResource("StandardMaterial3D_5rc0h")
+
+[node name="top_plane" parent="spacecraft" index="65" unique_id=736288576]
+surface_material_override/0 = SubResource("StandardMaterial3D_rq2ig")
+
+[node name="top_right_plane" parent="spacecraft" index="66" unique_id=259071249]
+surface_material_override/0 = SubResource("StandardMaterial3D_wbhcg")
+
+[node name="wall_front" parent="spacecraft" index="70" unique_id=1729215191]
+surface_material_override/0 = SubResource("StandardMaterial3D_bmqey")
+
+[node name="wall_right" parent="spacecraft" index="79" unique_id=1597111877]
+surface_material_override/0 = SubResource("StandardMaterial3D_8rgko")
+
+[node name="wall_right_001" parent="spacecraft" index="80" unique_id=2146454971]
+surface_material_override/0 = SubResource("StandardMaterial3D_f6j5j")
+
+[node name="window_anchor" parent="spacecraft" index="81" unique_id=1755022914]
+surface_material_override/0 = SubResource("StandardMaterial3D_ki7ff")
+
+[node name="window_anchor_001" parent="spacecraft" index="82" unique_id=1904048342]
+surface_material_override/0 = SubResource("StandardMaterial3D_ki7ff")
+
+[node name="window_anchor_002" parent="spacecraft" index="83" unique_id=1387654886]
+surface_material_override/0 = SubResource("StandardMaterial3D_ki7ff")
+
+[node name="window_anchor_003" parent="spacecraft" index="84" unique_id=910856670]
+surface_material_override/0 = SubResource("StandardMaterial3D_ki7ff")
+
+[node name="window_anchor_004" parent="spacecraft" index="85" unique_id=1643056809]
+surface_material_override/0 = SubResource("StandardMaterial3D_ki7ff")
+
+[node name="window_anchor_005" parent="spacecraft" index="86" unique_id=963771624]
+surface_material_override/0 = SubResource("StandardMaterial3D_ki7ff")
+
+[node name="window_anchor_006" parent="spacecraft" index="87" unique_id=29227673]
+surface_material_override/0 = SubResource("StandardMaterial3D_ki7ff")
+
+[node name="window_anchor_007" parent="spacecraft" index="88" unique_id=1585102412]
+surface_material_override/0 = SubResource("StandardMaterial3D_ki7ff")
+
+[node name="wires" parent="spacecraft" index="89" unique_id=971614565]
+surface_material_override/0 = SubResource("StandardMaterial3D_kyagm")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=153438057 node_paths=PackedStringArray("raycaster", "subViewport", "map")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.447045, -2.4973564)
@@ -85,9 +456,16 @@ debug_shape_thickness = 5
 environment = SubResource("Environment_qve38")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=1543795057]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.157501, -1.8653257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25148582, 4.883107, -5.1689053)
+light_color = Color(1, 0.944, 0.88, 1)
+light_energy = 1.813
+light_indirect_energy = 2.75
 shadow_enabled = true
-omni_range = 21.371
+shadow_bias = 0.412
+shadow_normal_bias = 1.273
+shadow_transmittance_bias = -3.2
+shadow_opacity = 0.86
+omni_range = 11.04993
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1236830788]
 anisotropic_filtering_level = 3
